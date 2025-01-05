@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-Group3AssignmentApplication<group3-assignment>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "group3.group3_assignment.Group3AssignmentApplication",
+      "projectName": "group3-assignment",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
