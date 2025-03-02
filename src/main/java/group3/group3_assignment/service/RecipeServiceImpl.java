@@ -99,4 +99,21 @@ public class RecipeServiceImpl implements RecipeService {
         logger.info("Deleted recipe with id " + recipeId + ".");
     }
 
+    @Override
+    public List<Recipe> getAllUserRecipes(Long userId) {
+        // Authentication authentication =
+        // SecurityContextHolder.getContext().getAuthentication();
+        // String authenticatedUsername = authentication.getName();
+        // User selectedUser = userRepo.findById(userId)
+        // .orElseThrow(() -> new UserNotFoundException("User with id: " + userId + " is
+        // not found"));
+        // if (!authenticatedUsername.equals(selectedUser.getUsername())) {
+        // throw new UserNotAuthorizeException(userId, "get", "recipes");
+        // }
+        List<Recipe> allUserRecipes = recipeRepo.findByUser_Id(userId)
+                .orElseThrow(() -> new UserNotFoundException("User with id of " + userId + "is not found"));
+
+        return allUserRecipes;
+    }
+
 }

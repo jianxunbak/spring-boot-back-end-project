@@ -7,7 +7,9 @@ import group3.group3_assignment.entity.Recipe;
 public interface RecipeService {
     Recipe createRecipeToUser(Long userId, Recipe recipe);
 
-    Recipe getOneRecipe(Integer userId);
+    Recipe getOneRecipe(Integer recipeId);
+
+    List<Recipe> getAllUserRecipes(Long userId);
 
     List<Recipe> getAllRecipes();
 

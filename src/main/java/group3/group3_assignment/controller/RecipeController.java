@@ -2,12 +2,9 @@ package group3.group3_assignment.controller;
 
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import group3.group3_assignment.entity.Recipe;
@@ -48,6 +45,12 @@ public class RecipeController {
     public ResponseEntity<Recipe> getOneRecipe(@PathVariable Integer recipeId) {
         Recipe oneRecipe = recipeService.getOneRecipe(recipeId);
         return new ResponseEntity<>(oneRecipe, HttpStatus.OK);
+    }
+
+    @GetMapping("/{userId}/userRecipes")
+    public ResponseEntity<List<Recipe>> getAllUserRecipes(@PathVariable Long userId) {
+        List<Recipe> userRecipes = recipeService.getAllUserRecipes(userId);
+        return new ResponseEntity<>(userRecipes, HttpStatus.OK);
     }
 
     @PutMapping("/{recipeId}")

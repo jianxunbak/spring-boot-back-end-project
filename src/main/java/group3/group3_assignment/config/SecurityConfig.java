@@ -51,7 +51,8 @@ public class SecurityConfig {
         http
                 // first try to match the /recipe route and permit it (dont need authentication)
                 .authorizeHttpRequests(
-                        authz -> authz.requestMatchers(HttpMethod.GET, "/recipe", "/recipe/{recipeId}").permitAll()
+                        authz -> authz.requestMatchers(HttpMethod.GET, "/recipe", "/recipe/{recipeId}")
+                                .permitAll()
                                 .requestMatchers(HttpMethod.POST, "/auth/generateToken", "/users").permitAll()
                                 // any other request will need to authentication
                                 .anyRequest().authenticated())

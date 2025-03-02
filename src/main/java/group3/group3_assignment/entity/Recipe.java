@@ -63,6 +63,18 @@ public class Recipe {
     @Column(name = "steps")
     private List<String> steps;
 
+    @Column(name = "Cuisine")
+    private String cuisine;
+
+    @Column(name = "city")
+    private String city;
+
+    @Column(name = "latitude")
+    private double latitude;
+
+    @Column(name = "longitude")
+    private double longitude;
+
     @JsonIgnore
     @OneToMany(mappedBy = "recipe", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Favourites> favourites;

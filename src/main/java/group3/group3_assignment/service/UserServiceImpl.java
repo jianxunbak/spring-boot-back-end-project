@@ -41,13 +41,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User getUser(Long id) {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        String authenticatedUsername = authentication.getName();
         User selectedUser = userRepo.findById(id)
                 .orElseThrow(() -> new UserNotFoundException("user with id: " + id + "is not found."));
-        if (!authenticatedUsername.equals(selectedUser.getUsername())) {
-            throw new UserNotAuthorizeException(id, "get", "another user detail");
-        }
         return selectedUser;
     }
 
