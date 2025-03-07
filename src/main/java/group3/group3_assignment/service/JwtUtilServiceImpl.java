@@ -8,8 +8,9 @@ import javax.crypto.SecretKey;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
-
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import group3.group3_assignment.controller.AuthController;
@@ -20,22 +21,30 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
+import jakarta.annotation.PostConstruct;
 
 @Service
 @Configuration
 public class JwtUtilServiceImpl implements JwtUtillService {
     UserRepo userRepo;
 
+    // secret key. need to store this somewhere else!
+    @Value("${SECRET_KEY}")
+    private String secretKey;
+
+    private SecretKey key;
+
     public JwtUtilServiceImpl(UserRepo userRepo) {
         this.userRepo = userRepo;
     }
 
-    private static final Logger logger = LoggerFactory.getLogger(AuthController.class);
-
-    // secret key. need to store this somewhere else!
-    private final String secretKey = "2c5a9f9c8c4d6eaf4f9a9c5d2f317c8d1b8f7e7d69f8b18f01b06f3a828c09a2";
     // creates a crytographic secret key
-    private final SecretKey key = Keys.hmacShaKeyFor(secretKey.getBytes());
+    @PostConstruct
+    public void init() {
+        this.key = Keys.hmacShaKeyFor(secretKey.getBytes());
+    }
+
+    private static final Logger logger = LoggerFactory.getLogger(AuthController.class);
 
     public Map<String, String> generateToken(String username) {
         logger.debug("entered generate Token service");
