@@ -6,11 +6,13 @@ group3/group3_assignment/exception/ErrorResponse.class
 group3/group3_assignment/service/RecipeService.class
 group3/group3_assignment/config/SecurityConfig.class
 group3/group3_assignment/service/UserServiceDetails.class
+group3/group3_assignment/entity/UserValidationGroup$EditUserGroup.class
 group3/group3_assignment/exception/TokenNotGeneratedException.class
 group3/group3_assignment/controller/FavouritesController.class
 group3/group3_assignment/entity/AuthRequest.class
-group3/group3_assignment/entity/UserPasswordDto.class
 group3/group3_assignment/exception/RecipeNotFoundException.class
+group3/group3_assignment/entity/UserValidationGroup$CreateUserGroup.class
+group3/group3_assignment/entity/UserValidationGroup.class
 group3/group3_assignment/entity/Favourites$FavouritesBuilder.class
 group3/group3_assignment/entity/Favourites.class
 group3/group3_assignment/service/JwtUtilServiceImpl.class
@@ -21,6 +23,7 @@ group3/group3_assignment/service/UserServiceImpl.class
 group3/group3_assignment/entity/Recipe.class
 group3/group3_assignment/service/RecipeServiceImpl.class
 group3/group3_assignment/exception/GlobalExceptionHandler.class
+group3/group3_assignment/entity/UserValidationGroup$EditPasswordGroup.class
 group3/group3_assignment/entity/Recipe$RecipeBuilder.class
 group3/group3_assignment/controller/UserController.class
 group3/group3_assignment/exception/UserNotAuthorizeException.class

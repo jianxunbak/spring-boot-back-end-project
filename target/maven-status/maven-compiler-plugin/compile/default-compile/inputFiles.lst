@@ -10,7 +10,7 @@
 /Users/jianxun/SCTP/combined Module 1 and 2 assignment/SpringBoot Back end/src/main/java/group3/group3_assignment/entity/Favourites.java
 /Users/jianxun/SCTP/combined Module 1 and 2 assignment/SpringBoot Back end/src/main/java/group3/group3_assignment/entity/Recipe.java
 /Users/jianxun/SCTP/combined Module 1 and 2 assignment/SpringBoot Back end/src/main/java/group3/group3_assignment/entity/User.java
-/Users/jianxun/SCTP/combined Module 1 and 2 assignment/SpringBoot Back end/src/main/java/group3/group3_assignment/entity/UserPasswordDto.java
+/Users/jianxun/SCTP/combined Module 1 and 2 assignment/SpringBoot Back end/src/main/java/group3/group3_assignment/entity/UserValidationGroup.java
 /Users/jianxun/SCTP/combined Module 1 and 2 assignment/SpringBoot Back end/src/main/java/group3/group3_assignment/exception/DuplicateFavouritesException.java
 /Users/jianxun/SCTP/combined Module 1 and 2 assignment/SpringBoot Back end/src/main/java/group3/group3_assignment/exception/ErrorResponse.java
 /Users/jianxun/SCTP/combined Module 1 and 2 assignment/SpringBoot Back end/src/main/java/group3/group3_assignment/exception/FavUserNotFoundException.java

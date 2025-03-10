@@ -24,7 +24,6 @@ import io.jsonwebtoken.security.Keys;
 import jakarta.annotation.PostConstruct;
 
 @Service
-@Configuration
 public class JwtUtilServiceImpl implements JwtUtillService {
     UserRepo userRepo;
 
