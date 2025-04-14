@@ -77,7 +77,7 @@ public class SecurityConfig {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
         corsConfiguration
                 .setAllowedOrigins(List.of("http://localhost:5173", "https://react-front-end-v1.onrender.com",
-                        "https://recipefront-end.netlify.app'"));
+                        "https://recipefront-end.netlify.app"));
         corsConfiguration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE"));
 
         corsConfiguration.setAllowedHeaders(List.of("*"));
