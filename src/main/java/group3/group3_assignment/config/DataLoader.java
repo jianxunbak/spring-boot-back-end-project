@@ -32,7 +32,9 @@ public class DataLoader {
 
         @PostConstruct
         public void loadData() {
+                favouritesRepository.deleteAll();
                 recipeRepo.deleteAll();
+                userRepo.deleteAll();
 
                 String dateToParse1 = "2018-11-22";
                 String dateToParse2 = "2018-11-01";
