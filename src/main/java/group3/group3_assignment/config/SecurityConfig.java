@@ -53,7 +53,9 @@ public class SecurityConfig {
                 .authorizeHttpRequests(
                         authz -> authz.requestMatchers(HttpMethod.GET, "/recipe", "/recipe/{recipeId}")
                                 .permitAll()
-                                .requestMatchers(HttpMethod.POST, "/auth/generateToken", "/users").permitAll()
+                                .requestMatchers(HttpMethod.POST, "/auth/generateToken", "/users",
+                                        "/auth/validateToken")
+                                .permitAll()
                                 // any other request will need to authentication
                                 .anyRequest().authenticated())
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
