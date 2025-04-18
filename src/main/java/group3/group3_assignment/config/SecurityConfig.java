@@ -56,6 +56,8 @@ public class SecurityConfig {
                                 .requestMatchers(HttpMethod.POST, "/auth/generateToken", "/users",
                                         "/auth/validateToken")
                                 .permitAll()
+                                .requestMatchers(HttpMethod.HEAD, "/")
+                                .permitAll()
                                 // any other request will need to authentication
                                 .anyRequest().authenticated())
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
