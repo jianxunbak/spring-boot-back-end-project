@@ -54,7 +54,6 @@ public class User {
         @Column(name = "email", unique = true, nullable = false)
         private String email;
 
-        @JsonIgnore
         @NotBlank(message = "Password cannot be blank", groups = {
                         UserValidationGroup.EditPasswordGroup.class,
                         UserValidationGroup.CreateUserGroup.class })
